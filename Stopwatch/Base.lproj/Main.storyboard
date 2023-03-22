@@ -20,29 +20,38 @@
                                 <rect key="frame" x="90" y="384" width="231" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AK5-di-4HS">
-                                        <rect key="frame" x="28.666666666666671" y="0.0" width="174" height="50.333333333333336"/>
+                                    <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AK5-di-4HS">
+                                        <rect key="frame" x="90.666666666666671" y="0.0" width="50.000000000000014" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7L4-Xq-VXz">
-                                        <rect key="frame" x="5" y="60.333333333333343" width="221" height="34.666666666666657"/>
+                                        <rect key="frame" x="5" y="60" width="221" height="35"/>
                                         <subviews>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpd-HQ-fd6">
-                                                <rect key="frame" x="0.0" y="0.0" width="70.333333333333329" height="34.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="70.333333333333329" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Start"/>
+                                                <connections>
+                                                    <action selector="startButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ooc-tr-gnk"/>
+                                                </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rg-5K-4b5">
-                                                <rect key="frame" x="75.333333333333343" y="0.0" width="70.333333333333343" height="34.666666666666664"/>
+                                                <rect key="frame" x="75.333333333333343" y="0.0" width="70.333333333333343" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Pause"/>
+                                                <connections>
+                                                    <action selector="pauseButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SlX-AW-Syo"/>
+                                                </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFp-Ch-qlc">
-                                                <rect key="frame" x="150.66666666666666" y="0.0" width="70.333333333333343" height="34.666666666666664"/>
+                                                <rect key="frame" x="150.66666666666666" y="0.0" width="70.333333333333343" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Stop"/>
+                                                <connections>
+                                                    <action selector="stopButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Rb-CO-iSL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -52,6 +61,12 @@
                         <viewLayoutGuide key="safeArea" id="1Mu-AO-EBf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="pauseButton" destination="4rg-5K-4b5" id="t3I-DV-vGR"/>
+                        <outlet property="startButton" destination="jpd-HQ-fd6" id="TeO-Kk-xVy"/>
+                        <outlet property="stopButton" destination="AFp-Ch-qlc" id="QnO-lk-wP7"/>
+                        <outlet property="timeLabel" destination="AK5-di-4HS" id="dpl-zu-kW3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
