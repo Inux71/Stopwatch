@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         timeLabel.text = "00:00:00"
+        pauseButton.isEnabled = false
     }
 
     private func startTimer() {
@@ -60,15 +61,20 @@ class ViewController: UIViewController {
     
     @IBAction func startButtonClicked(_ sender: Any) {
         startTimer()
+        startButton.isEnabled = false
+        pauseButton.isEnabled = true
     }
     
     
     @IBAction func pauseButtonClicked(_ sender: Any) {
         pauseTimer()
+        startButton.isEnabled = true
+        pauseButton.isEnabled = false
     }
     
     
     @IBAction func stopButtonClicked(_ sender: Any) {
         stopTimer()
+        startButton.isEnabled = true
     }
 }
