@@ -47,6 +47,7 @@ class ViewController: UIViewController {
         
         counter = 0
         timeLabel.text = "00:00:00"
+        pauseButton.isEnabled = false
     }
     
     @objc private func updateTimer() {
